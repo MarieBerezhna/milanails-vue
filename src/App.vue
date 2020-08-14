@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div id="nav" class="position-absolute w-100 mx-auto">
+        
+        <router-link to="/">Milanails</router-link> |
+        <router-link to="/blog">Blog</router-link>
+      </div>
+    <div class="container-fluid nav-bar">
     </div>
     <router-view/>
   </div>
@@ -16,17 +19,30 @@
   text-align: center;
   color: #2c3e50;
 }
-
+.nav-bar {
+  // height: 340px;  
+  height: 80px;
+  background-image: url(./assets/cover.png);
+  background-position: center;
+  background-size: 100%;
+  color: white;
+  filter:contrast(50%);
+}
 #nav {
   padding: 30px;
-
+  z-index: 10;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
 
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-bar {
+    height: 340px;  
   }
 }
 </style>
