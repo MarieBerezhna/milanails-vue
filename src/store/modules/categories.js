@@ -8,27 +8,27 @@ const state = {
   categories: [
     {
       id: 1,
-      name: "Манікюр",
+      name: "Маникюр",
       image: "manicure.jpg",
       services: [
         {
           id: 1,
-          name: "Манікюр",
+          name: "Маникюр",
           price: 200,
         },
         {
           id: 2,
-          name: "Покриття",
+          name: "Покрытие",
           price: 200,
         },
         {
           id: 3,
-          name: "Зняття",
+          name: "Снятие",
           price: 50,
         },
         {
           id: 4,
-          name: "Зняття без покриття",
+          name: "Снятие без покрития",
           price: 100,
         },
       ],

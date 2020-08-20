@@ -2,19 +2,33 @@
   <div id="app">
       <div id="nav" class="position-absolute w-100 mx-auto">
         <router-link to="/" id="logo-link">
-          <img :src="require('@/assets/logo.png')" alt="Milanails"> M
+          <img :src="require('@/assets/logo.png')" alt="Milanails">
         </router-link>
-        <router-link to="/">Manicure</router-link>
+                <router-link to="/">Home</router-link>
+        <router-link to="/manicure">Manicure</router-link>
         <router-link to="/pedicure">Pedicure</router-link>
         <router-link to="/blog">Blog</router-link>
+        <router-link to="/about">About</router-link>
       </div>
     <div class="container-fluid nav-bar">
     </div>
-    <router-view/>
+    <router-view class="view"/>
+    <MainFooter/>
   </div>
 </template>
-
+<script>
+import MainFooter from '@/components/MainFooter'
+export default {
+    components: {
+      MainFooter
+    }
+}
+</script>
 <style lang="scss">
+$primary : #AA2423;
+h1 {
+  color: $primary;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +36,11 @@
   text-align: center;
   color: #2c3e50;
   font-family: cursive;
+}
+.view {
+  height: auto;
+  min-height: 50vh;
+  padding: 50px;
 }
 #logo-link {
   position: absolute;
@@ -32,11 +51,11 @@
   }
 }
 .nav-bar {
-  // height: 340px;  
   height: 80px;
   background-image: url(./assets/cover.png);
-  background-position: center;
+  background-position: top;
   background-size: 100%;
+  background-repeat: no-repeat;
   color: white;
   filter:contrast(50%);
 }
@@ -50,7 +69,7 @@
     opacity: 0.7;
     margin: 10px;
     &.router-link-exact-active {
-      color: #AA2423;
+      color: $primary;
       opacity: 1;
       border-bottom: 2px solid white;
     }
@@ -65,7 +84,7 @@
 }
 @media screen and (min-width: 1200px) {
   .nav-bar {
-    height: 340px;
+    height: 450px;
   }
   #nav a {
     font-size: 1.5rem;
