@@ -10,6 +10,7 @@ const state = {
       id: 1,
       name: "Маникюр",
       image: "manicure.jpg",
+      link: "manicure",
       services: [
         {
           id: 1,
@@ -36,6 +37,7 @@ const state = {
     {
       id: 2,
       name: "Педикюр",
+      link: "pedicure",
       image: "pedicure.jpg",
       services: [
         {
@@ -73,6 +75,7 @@ const state = {
     {
       id: 3,
       name: "Бровки",
+      link: "eyebrows",
       image: "eyebrows.jpg",
       services: [
         {

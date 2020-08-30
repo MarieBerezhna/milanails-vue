@@ -1,5 +1,5 @@
 <template>
-    <div class="container my-md-5">
+    <div class="container myb-md-5">
         <h1 class="mb-4"><span class="d-none d-md-inline">Мастерская маникюра</span> Milanails предлагает:</h1>
         <div class="categories row">
             <div class="category col-12 col-md-4 mb-4" v-for="category in allCategories" :key="category.id" 

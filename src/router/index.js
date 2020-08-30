@@ -1,8 +1,9 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import Service from '../views/Service.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
   const routes = [
   {
@@ -11,14 +12,9 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/manicure',
-    name: 'Manicure',
-    component: Home
-  },
-  {
-    path: '/pedicure',
-    name: 'Pedicure',
-    component: Home
+    path: '/service/:link',
+    name: 'service',
+    component: Service
   },
   {
     path: '/blog',
@@ -33,11 +29,11 @@ Vue.use(VueRouter)
     name: 'About',
     component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
   }
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   routes
-})
+});
 
-export default router
+export default router;

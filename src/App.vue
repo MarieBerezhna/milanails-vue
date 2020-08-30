@@ -4,11 +4,8 @@
         <router-link to="/" id="logo-link">
           <img :src="require('@/assets/logo.png')" alt="Milanails">
         </router-link>
-                <router-link to="/">Home</router-link>
-        <router-link to="/manicure">Manicure</router-link>
-        <router-link to="/pedicure">Pedicure</router-link>
-        <router-link to="/blog">Blog</router-link>
-        <router-link to="/about">About</router-link>
+        <router-link to="/">Главная</router-link>
+        <router-link v-for="cat in this.$store.state.categories.categories" :key="cat.id" :to="'/service/' + cat.link">{{cat.name}}</router-link>
       </div>
     <div class="container-fluid nav-bar">
     </div>
